@@ -1,0 +1,16 @@
+    #linea li {
+        padding: 18px;
+        margin: 8px 0;
+        background: #ddd;
+        list-style: none;
+    }
+    #linea li a {
+        cursor: pointer;
+        float: right;
+        padding: 3px 7px;
+        background: #fbfbfb;
+    }
+
+    #fondo {
+        background-color: #FFF2CC;
+    }
