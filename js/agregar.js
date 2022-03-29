@@ -13,11 +13,11 @@ function crear_elemento(){
 
            <div class="col">
                <label class="fw-bold">PCS</label>
-               <input type="text" class="form-control mt-2" placeholder="Número Telefónico">
+               <input type="text" class="form-control mt-2" placeholder="Número Telefónico" name="pcs[]">
 
                <label class="mt-2 fw-bold">Sucursal</label>
-               <select class="form-select mt-2">
-                   <option selected>Lista de Sucursales</option>
+               <select class="form-select mt-2" name="sucursal[]">
+                   <option value="" selected>Lista de Sucursales</option>
                         <option value="Antofagasta SSCC">Antofagasta SSCC</option>
                         <option value="Calama SSCC">Calama SSCC</option>
                         <option value="Copiapó SSCC">Copiapó SSCC</option>
@@ -82,24 +82,23 @@ function crear_elemento(){
 
            <div class="col">
                <label class="fw-bold">Equipo Aceptado</label>
-               <input type="text" class="form-control mt-2" placeholder="Equipo o Código">
+               <input type="text" class="form-control mt-2" placeholder="Equipo o Código" name="equipo[]">
 
                <label class="mt-2 fw-bold">Bolsa</label>
-               <select class="form-select mt-2">
-                   <option selected>Lista de Bolsas</option>
-                   <option value="1">One</option>
-                   <option value="2">Two</option>
-                   <option value="3">Three</option>
+               <select class="form-select mt-2" name="bolsa[]">
+                   <option value="" selected>Lista de Bolsas</option>
+                   <option value="Bolsa 100 GB">Bolsa 100 GB</option>
+                   <option value="Bolsa 100 GB">Bolsa 200 GB</option>
                </select>
            </div>
 
            <div class="col">
                <label class="fw-bold">Interacción</label>
-               <input type="text" class="form-control mt-2" placeholder="Número de Interacción">
+               <input type="text" class="form-control mt-2" placeholder="Número de Interacción" name="interaccion[]">
 
                <label class="mt-2 fw-bold">Descuento</label>
-               <select class="form-select mt-2">
-                   <option selected>Lista de Descuentos</option>
+               <select class="form-select mt-2" name="descuento[]">
+                   <option value="" selected>Lista de Descuentos</option>
                    <option value="40% X 6 MESES">30% X 6 MESES</option>
                    <option value="50% X 6 MESES">50% X 6 MESES</option>
                    <option value="20% X 12 MESES">20% X 12 MESES</option>
@@ -111,8 +110,8 @@ function crear_elemento(){
 
            <div class="col">
                <label class="fw-bold">Plan</label>
-               <select class="form-select mt-2">
-                   <option selected>Lista de Planes</option>
+               <select class="form-select mt-2" name="plan[]">
+                   <option value="" selected>Lista de Planes</option>
                    <option value="PLAN CUENTA EXACTA XS">PLAN CUENTA EXACTA XS</option>
                    <option value="PLAN CUENTA EXACTA S">PLAN CUENTA EXACTA S</option>
                    <option value="PLAN POSTPAGO MAX Y">PLAN POSTPAGO MAX Y</option>
@@ -125,7 +124,7 @@ function crear_elemento(){
                </select>
 
                <label class="mt-2 fw-bold">Fecha de Retiro</label>
-               <input type="date" class="form-control mt-2">
+               <input type="date" class="form-control mt-2" name="fecha[]">
            </div>
 
        </div>

@@ -21,6 +21,8 @@
 
 <body>
 
+<form method="POST" action='include/procesa_agregar_linea.php'>
+
     <div class="container">
 
         <div class="row">
@@ -36,10 +38,10 @@
 
                 <div class="col">
                     <label class="fw-bold">PCS</label>
-                    <input type="text" class="form-control mt-2" placeholder="Número Telefónico">
+                    <input type="text" class="form-control mt-2" placeholder="Número Telefónico" name="pcs[]">
 
                     <label class="mt-2 fw-bold">Sucursal</label>
-                    <select class="form-select mt-2">
+                    <select class="form-select mt-2" name="sucursal[]">
                         <option selected>Lista de Sucursales</option>
                         <option value="Antofagasta SSCC">Antofagasta SSCC</option>
                         <option value="Calama SSCC">Calama SSCC</option>
@@ -105,23 +107,22 @@
 
                 <div class="col">
                     <label class="fw-bold">Equipo Aceptado</label>
-                    <input type="text" class="form-control mt-2" placeholder="Equipo o Código">
+                    <input type="text" class="form-control mt-2" placeholder="Equipo o Código" name="equipo[]">
 
                     <label class="mt-2 fw-bold">Bolsa</label>
-                    <select class="form-select mt-2">
+                    <select class="form-select mt-2" name="bolsa[]">
                         <option selected>Lista de Bolsas</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="Bolsa 100 GB">Bolsa 100 GB</option>
+                        <option value="Bolsa 200 GB">Bolsa 200 GB</option>
                     </select>
                 </div>
 
                 <div class="col">
                     <label class="fw-bold">Interacción</label>
-                    <input type="text" class="form-control mt-2" placeholder="Número de Interacción">
+                    <input type="text" class="form-control mt-2" placeholder="Número de Interacción" name="interaccion[]">
 
                     <label class="mt-2 fw-bold">Descuento</label>
-                    <select class="form-select mt-2">
+                    <select class="form-select mt-2" name="descuento[]">
                         <option selected>Lista de Descuentos</option>
                         <option value="40% X 6 MESES">30% X 6 MESES</option>
                         <option value="50% X 6 MESES">50% X 6 MESES</option>
@@ -134,7 +135,7 @@
 
                 <div class="col">
                     <label class="fw-bold">Plan</label>
-                    <select class="form-select mt-2">
+                    <select class="form-select mt-2" name="plan[]">
                         <option selected>Lista de Planes</option>
                         <option value="PLAN CUENTA EXACTA XS">PLAN CUENTA EXACTA XS</option>
                         <option value="PLAN CUENTA EXACTA S">PLAN CUENTA EXACTA S</option>
@@ -148,30 +149,26 @@
                     </select>
 
                     <label class="mt-2 fw-bold">Fecha de Retiro</label>
-                    <input type="date" class="form-control mt-2">
+                    <input type="date" class="form-control mt-2" name="fecha[]">
                 </div>
 
             </div>
 
         </div>
 
-
-
-
-
-
     </div>
+
 
 <span id="cuadro"></span>
 
             <!-- botones -->
 
-            <div class="container" id="agregar">
-
+            <div class="container">
+                <button type="submit" class="btn btn-success mt-2"><i class="bi bi-check-circle"></i></button>
                 <button type="button" class="btn btn-outline-success mt-2" onclick="crear_elemento();" style="float:right"><i class="bi bi-plus-square-dotted"></i></button>
     
             </div>
-
+</form>
 </body>
 
 </html>
